@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="maxflow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Maxflow_Task</title>
+</head>
+
+<body>
+
+    <div class="hover:cursor-pointer">
+        <div class="w-full h-14 bg-black flex justify-between items-center p-2 ">
+            <div>
+                <div class="flex md:h-9 md:w-48 border-2 md:border-white  md:rounded-md hover:border-none ">
+                    <img src="../images/envato-logo-blue-black.png" alt="images" class="h-6 w-6 my-1 ">
+                    <span class="text-white font-medium text-xl md:text-2xl">envato</span> <span
+                        class="text-[rgb(130,180,64)] text-xl md:text-2xl">market</span>
+
+                </div>
+            </div>
+            <div
+                class="border-2 border-[rgb(130,180,64)] h-8 w-20 text-center flex justify-center rounded-md font-medium bg-[rgb(130,180,64)]">
+                <button class="text-white">Buy now</button>
+            </div>
+
+        </div>
+
+        <div class="w-full h-32 bg-[rgb(1,75,156)] ">
+
+            <div class="text-end md:flex md:flex-row md:ml-80 md:pt-2">
+                <div> <i class="fa fa-map-marker text-[rgb(101,192,245)]"></i><span
+                        class="text-[11px] md:text-[13px] text-[rgb(101,192,245)] ml-2  mr-1 md:mr-7">88 Brooklyn St New
+                        York. USA</span></div>
+                <div> <i class="fa fa-clock-o text-[rgb(101,192,245)]"></i><span
+                        class="text-[11px] md:text-[13px] text-[rgb(101,192,245)] ml-2 mr-6">Mon to Fri - 9am to
+                        6pm</span></div>
+
+            </div>
+
+            <div class=" h-[81px] border-2 border-yellow-300 flex justify-end border-none md:my-4  ">
+                <img src="../images/logo.webp" alt="images"
+                    class="h-7 w-32 relative right-5 md:h-11 md:w-44  md:relative md:left-12">
+
+                <div class="md:flex md:gap-3  md:text-white hidden  md:relative md:top-[-35px] md:left-[1120px]">
+                    <div><i class="fa-brands fa-facebook"></i></div>
+                    <div><i class="fa-brands fa-x-twitter"></i></div>
+                    <div><i class="fa-brands fa-instagram"></i></div>
+                    <div><i class="fa-solid fa-envelope"></i></div>
+                </div>
+
+                <div class="w-[27%] md:w-[65%] border-2 bg-white border-none">
+
+                    <div class=" md:flex md:justify-between hidden">
+                        <ul class="md:flex md:relative md:gap-11 md:my-7 md:font-bold md:text-slate-500  ">
+                            <li class="md:ml-12">Home</li>
+                            <li>About</li>
+                            <li>Services</li>
+                            <li>News</li>
+                            <li>Pages</li>
+                            <li>Contact</li>
+                        </ul>
+
+                        <div class="md:flex md:my-3">
+                            <div
+                                class="md:h-10 md:w-10 md:border-2 md:border-[rgb(101,192,245)] md:rounded-full md:flex md:justify-center md:text-center md:mt-2 ">
+                                <i class="fa fa-phone md:text-[rgb(101,192,245)] md:relative md:top-3 "></i>
+                            </div>
+                            <div class="md:flex-row md:ml-2 md:mx-7 ">
+                                <span class=" md:text-slate-500 md:font-medium md:text-[13px] ">Open 24 Hours!</span>
+                                <div class=" md:text-[rgb(1,75,156)] md:font-medium ">(619) 123 4567</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-[23%] md:w-[15%] border-2 bg-[rgb(101,192,245)] border-none flex justify-center items-center md:hover:bg-[rgb(1,75,156)] ">
+
+                    <div class="hidden md:block font-bold text-white">Get in Touch!</div>
+                    <div class="md:hidden">
+                        <a class="text-2xl text-white font-bold " href="#">&#8801;</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="">
+            <img src="../images/01.jpg" alt="images" class="w-full md:h-[600px] h-[350px]">
+            <div
+                class="h-[350px]  md:h-[600px] bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-slate-500  relative bottom-[350px] md:bottom-[600px] ">
+                <div class="relative top-20 ml-6 md:ml-52 md:top-44">
+                    <div class="font-bold text-3xl md:text-6xl text-white">Providing Quality</div>
+                    <div class="font-bold text-3xl md:text-6xl text-white ">Plumbing Services</div>
+                    <div class="text-[rgb(101,192,245)] my-4 md:my-7 md:text-xl">We specialize in all types of plumbing
+                        services </div>
+
+                    <button
+                        class="w-52 h-12 md:w-56 md:h-14 border-2 border-black text-sm md:text-sm font-bold text-white bg-[rgb(101,192,245)] border-none">Schedule
+                        an Appointment</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- blue -->
+
+        <div class="h-52 w-full bg-[rgb(1,75,156)] mt-[-350px] md:mt-[-600px]  ">
+            <div class="w-[270px] md:w-[450px]  text-center mx-6 md:mx-[530px] py-16 font-bold text-white">Let's book
+                your first plumbing service & Get 30% off now</div>
+            <div class="flex flex-wrap gap-6 mx-5 my-[-25px] md:justify-center ">
+                <div class="h-40 w-32 border-2 bg-white md:w-60 md:h-36  ">
+                    <img src="../images/home-icon-1.webp" alt="images" class="h-8 w-8 mx-3 my-6">
+                    <div class="mt-[-12px] mx-4 w-28 text-[rgb(1,75,156)] font-bold">Book Online</div>
+                    <div class="text-sm mx-4 font-medium text-slate-600">Lorem ipsum dolor sit amet csect</div>
+                    <div class="flex justify-end">
+                        <div
+                            class="h-16 w-9 bg-slate-300 flex items-center justify-center text-slate-600  mt-[-154px] md:mt-[-132px] ">
+                            01</div>
+                    </div>
+                </div>
+                <div class="h-40 w-32 border-2  bg-white md:w-60 md:h-36 ">
+                    <img src="../images/home-icon-2.webp" alt="images" class="h-8 w-8 mx-3 my-6">
+                    <div class="mt-[-12px] mx-4 w-28 text-[rgb(1,75,156)] font-bold ">Professionals</div>
+                    <div class="text-sm mx-4 font-medium text-slate-600">Lorem ipsum dolor sit amet csect</div>
+
+                    <div class=" flex justify-end">
+                        <div
+                            class="h-16 w-9 bg-slate-300  flex items-center justify-center text-slate-600 mt-[-154px] md:mt-[-132px]">
+                            02</div>
+                    </div>
+                </div>
+                <div class="h-40 w-32 border-2  bg-white md:w-60 md:h-36  ">
+                    <img src="../images/home-icon-3.webp" alt="images" class="h-8 w-8 mx-3 my-6">
+                    <div class="mt-[-12px] mx-4 w-24 md:w-40 text-[rgb(1,75,156)] font-bold">Fully Licensed</div>
+                    <div class="text-sm mx-4 font-medium text-slate-600">Lorem ipsum dolor sit amet</div>
+                    <div class="flex justify-end">
+                        <div
+                            class="h-16 w-9  bg-slate-300  flex items-center justify-center text-slate-600 mt-[-157px] md:mt-[-112px]">
+                            03</div>
+                    </div>
+                </div>
+                <div class="h-40 w-32 border-2  bg-white md:w-60 md:h-36  ">
+                    <img src="../images/home-icon-4.webp" alt="images" class="h-8 w-8 mx-3 my-6">
+                    <div class="mt-[-12px] mx-4 w-28 md:w-40 text-[rgb(1,75,156)] font-bold">Quality Services</div>
+                    <div class="text-sm mx-4 font-medium text-slate-600">Lorem ipsum dolor sit amet</div>
+                    <div class="flex justify-end">
+                        <div
+                            class="h-16 w-9  bg-slate-300  flex items-center justify-center text-slate-600 mt-[-157px] md:mt-[-112px]">
+                            04</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- picture -->
+
+        <div
+            class="flex flex-col  items-center relative top-96 md:flex md:flex-row md:justify-center md:gap-14 md:top-36">
+            <div class="w-72 h-72 border-2 border-black border-none md:w-[500px] md:h-[500px] ">
+                <img src="../images/welcome-hero.webp" alt="images" class="md:mt-[-160px]">
+            </div>
+            <div class="w-72 h-[850px] border-2 border-black border-none md:w-[600px] md-[800px] md:mt-8">
+                <div class="text-[rgb(101,192,245)] font-semibold text-sm my-4  ">WELCOME TO MAXFLOW PLUMBING</div>
+                <div class="text-[rgb(1,75,156)] font-bold text-3xl md:text-4xl">Making your home better by fixing
+                    plumbing</div>
+                <div class="text-[rgb(101,192,245)] font-bold my-4 ">Dedicated To Providing Quality Services</div>
+                <div class="text-slate-600">Explain to you how all this mistaken denouncing pleasure and praising pain
+                    was born and we will give you a complete simply free text account of the system, and expound the
+                    actual teachings.</div>
+
+                <div class="md:flex">
+                    <img src="../images/welcome-icon-1.webp" alt="images " class="h-16 w-16 mx-2 my-8">
+                    <div class="text-[rgb(1,75,156)] font-bold md:text-xl md:mt-8 ">Residential plumbing work</div>
+                    <img src="../images/welcome-icon-2.webp" alt="images" class="h-16 w-16 mx-2 my-8">
+                    <div class="text-[rgb(1,75,156)] font-bold md:text-xl md:mt-8">Commercial plumbing work</div>
+                </div>
+
+                <div class="md:flex">
+
+                    <div class="flex justify-center mt-8">
+                        <img src="../images/profile-photo.webp" alt="images" class="h-12 w-12 md:w-20 md:h-20">
+                    </div>
+
+                    <div class="text-center md:my-10 md:text-start md:ml-5">
+                        <div class="text-[rgb(1,75,156)] font-bold">Brittany Herman</div>
+                        <div class="text-sm">CEO & Founder of Compamny</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- services -->
+        <div class="md:relative md:top-[-544px]">
+
+            <div class="relative top-[460px] flex justify-center">
+                <div
+                    class="h-28 w-72 border-2 border-black text-sm text-[rgb(101,192,245)] font-semibold flex justify-center pt-20 bg-slate-100 border-none md:w-[1400px] md:h-[500px]">
+                    OUR SERVICES LIST</div>
+            </div>
+
+            <div
+                class="text-[rgb(1,75,156)] font-bold relative top-[470px] md:top-[70px] text-3xl md:text-5xl flex justify-center ">
+                Services We Provide</div>
+            <div
+                class="flex flex-col  relative top-[520px] mx-4 md:flex-row md:justify-center md:gap-6 md:top-[120px] ">
+                <div class="w-72 h-96 border-2 bg-white">
+                    <img src="../images/image-1.webp" alt="images">
+                    <div class="text-[rgb(1,75,156)] font-bold md:text-xl  mx-3 mt-3 ">Drain cleaning</div>
+                    <div class="text-slate-600 mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam!
+                    </div>
+                </div>
+                <div class="w-72 h-96 border-2  my-5 md:my-0 bg-white">
+                    <img src="../images/image-2.webp" alt="images">
+                    <div class="text-[rgb(1,75,156)] font-bold md:text-xl  mx-3 mt-3">Sewer installation</div>
+                    <div class="text-slate-600 mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                </div>
+                <div class="w-72 h-96 border-2 bg-white">
+                    <img src="../images/image-3.webp" alt="images">
+                    <div class="text-[rgb(1,75,156)] font-bold md:text-xl mx-3 mt-3">Leak detection</div>
+                    <div class="text-slate-600 mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+                <div class="w-72 h-96 border-2   my-5 md:my-0 bg-white">
+                    <img src="../images/image-4.webp" alt="images">
+                    <div class="text-[rgb(1,75,156)] font-bold md:text-xl  mx-3 mt-3">Water line install</div>
+                    <div class="text-slate-600 mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ab.
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <!-- logoipsum -->
+
+        <div class="relative top-[556px] flex flex-wrap justify-center gap-7 md:gap-28 md:top-[-350px]">
+
+            <div class="">
+                <img src="../images/logoipsum.webp" alt="image" class="h-6 w-28 md:w-32   ">
+            </div>
+            <div>
+                <img src="../images/logoipsum.webp" alt="image" class="h-6 w-28 md:w-32   ">
+            </div>
+            <div>
+                <img src="../images/logoipsum.webp" alt="image" class="h-6 w-28 md:w-32  ">
+            </div>
+            <div>
+                <img src="../images/logoipsum.webp" alt="image" class="h-6 w-28 md:w-32  ">
+            </div>
+            <div>
+                <img src="../images/logoipsum.webp" alt="image" class="h-6 w-28 md:w-32  ">
+            </div>
+        </div>
+
+        <div class="relative top-[600px] md:top-[-250px]">
+            <img src="../images/plumber img.jpeg" alt="image" class="h-96 md:h-[400px] md:w-full">
+            <div
+                class="h-96  md:h-[400px] bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-slate-500  relative bottom-[385px] md:bottom-[400px] ">
+                <div class="relative top-20   md:top-12 text-center py-9">
+                    <div class="font-bold text-2xl md:text-5xl text-white ">Efficient residential &</div>
+                    <div class="font-bold text-2xl md:text-5xl text-white ">commercial</div>
+                    <div class="font-bold text-2xl md:text-5xl text-white">plumbing services!</div>
+
+                    <button
+                        class="w-40 h-12 md:w-56 md:h-14 border-2 border-black text-sm md:text-sm font-bold text-white bg-[rgb(101,192,245)] border-none my-8">Discover
+                        More</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- box -->
+        <div class="md:flex md:justify-center  md:relative md:top-[-590px]">
+
+            <!-- box1 -->
+            <div>
+                <div class="h-[600px] md:h-[500px] border-2 relative top-72 mx-5 md:top-20 border-none">
+                    <div class="text-[rgb(101,192,245)] text-sm font-semibold my-2">BOOK AND CONSIDER IT DONE</div>
+                    <div class="text-[rgb(1,75,156)] text-3xl font-bold md:w-[470px] md:text-5xl">We specialize in all
+                        plumbing work</div>
+                    <div class="text-[rgb(101,192,245)] text-base font-bold my-4 md:mt-6">Dedicated To Providing Quality
+                        Services</div>
+                    <div class="text-slate-600 md:w-96">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Architecto iure voluptate molestias.</div>
+
+                    <div>
+                        <div class="md:flex">
+                            <div class="flex relative gap-5 top-12 mx-9">
+                                <div class=" text-center"><i
+                                        class="fa fa-check w-10 h-10 rounded-full py-2.5 bg-[rgb(101,192,245)] text-white"></i>
+                                </div>
+                                <div class="h-12 w-20  font-bold text-[rgb(1,75,156)]">Expert Plumbers</div>
+
+                            </div>
+                            <div class="text-slate-600 relative top-16 md:top-12 h-10 w-56 md:w-52 text-[13px] ml-6 ">
+                                There are many variations of passages of available.</div>
+                        </div>
+
+                        <div class="md:flex">
+                            <div class="flex relative gap-5 top-32 mx-9">
+                                <div class=" text-center"><i
+                                        class="fa fa-check w-10 h-10 rounded-full py-2.5 bg-[rgb(101,192,245)] text-white"></i>
+                                </div>
+                                <div class="h-12 w-20  font-bold text-[rgb(1,75,156)]">Brilliant Services</div>
+
+                            </div>
+                            <div class="text-slate-600 relative top-36 md:top-32 h-10 w-56 md:w-52  text-[13px] ml-6 ">
+                                There are many variations of passages of available.</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- middle -->
+            <div class="">
+                <img src="../images/plumber-transparent-reverse.webp" alt="image"
+                    class=" md:h-[585px] md:block hidden ">
+            </div>
+
+
+            <!-- box2 -->
+
+            <div>
+                <div
+                    class="h-[600px] md:h-[565px] border-2 relative top-80 mx-5 px-4 py-6  bg-[rgb(1,75,156)] md:w-96 md:top-6 md:px-11 ">
+                    <div class="font-bold text-xl text-white md:w-64">Book a <span
+                            class="text-[rgb(101,192,245)]">free</span> visit of our expert plumber</div>
+                    <input type="text" placeholder="Your Name"
+                        class="h-12 w-56 md:w-72 border-2 mt-5 bg-white text-[13px] font-semibold pl-4 border-none">
+                    <input type="email" placeholder="Your Email"
+                        class="h-12 w-56 md:w-72 border-2 my-3 bg-white text-[13px] font-semibold pl-4 border-none">
+                    <input type="text" placeholder="Your Subject"
+                        class="h-12 w-56 md:w-72 border-2 bg-white text-[13px] font-semibold pl-4 border-none">
+                    <input type="number" placeholder="Your Phone Number"
+                        class="h-12 w-56 md:w-72 border-2 my-3 bg-white text-[13px] font-semibold pl-4 border-none">
+                    <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message"
+                        class="h-36 w-56 md:w-72 border-2 bg-white text-[13px] font-semibold pl-4 pt-5 border-none"></textarea>
+                    <button
+                        class="h-12 w-44 border-2 text-[14px] font-semibold text-white bg-[rgb(101,192,245)] border-none">Submit
+                        a message</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div>
+            <img src="../images/aa1.jpg" alt="image" class="relative top-96 h-[780px] md:h-[1090px] md:top-[-590px]">
+            <div
+                class="h-[780px]  md:h-[350px] bg-gradient-to-b from-[rgb(101,192,245,0.8)]  to-[rgb(101,192,245)]  relative bottom-[396px] md:bottom-[1680px] ">
+            </div>
+            <div class="relative top-[-1110px] md:top-[-1920px]  text-center md:flex md:justify-center md:gap-14">
+                <div class="">
+                    <img src="../images/count-icon-1.webp" alt="image"
+                        class="h-16 w-20 ml-[122px] mb-3 md:h-24 md:w-28 md:ml-0">
+                    <div class="text-3xl font-bold text-white mb-2">8600</div>
+                    <div class="text-[12px] font-bold text-white mb-10">Projects completed</div>
+                </div>
+                <div>
+                    <img src="../images/count-icon-2.webp" alt="image"
+                        class="h-16 w-20 ml-[122px] mb-3 md:h-24 md:w-28">
+                    <div class="text-3xl font-bold text-white mb-2 md:ml-28">38+</div>
+                    <div class="text-[12px] font-bold text-white mb-10 md:ml-24">Years in Business</div>
+                </div>
+                <div>
+                    <img src="../images/count-icon-3.webp" alt="image"
+                        class="h-16 w-20 ml-[122px] mb-3 md:h-24 md:w-28">
+                    <div class="text-3xl font-bold text-white mb-2 md:ml-28">19</div>
+                    <div class="text-[12px] font-bold text-white mb-10 md:ml-28">No of Branches</div>
+                </div>
+                <div>
+                    <img src="../images/count-icon-4.webp" alt="image"
+                        class="h-16 w-20 ml-[122px] mb-3 md:h-24 md:w-28">
+                    <div class="text-3xl font-bold text-white mb-2 md:ml-28">6422</div>
+                    <div class="text-[12px] font-bold text-white md:ml-28">Satisfied Customers</div>
+                </div>
+            </div>
+
+            <div
+                class="h-[700px]  md:h-[390px] bg-gradient-to-b from-[rgb(0,0,0,0.2)]  to-slate-400  relative bottom-[1084px] md:bottom-[1890px] md:flex md:flex-row md:justify-center md:gap-8   ">
+
+                <div
+                    class="w-72 md:w-96 h-[650px] md:h-[300px] border-2 border-black relative top-16 mx-4 md:ml-[19rem] md:mr-[-20rem]  border-none ">
+                    <div class="text-[rgb(81,181,239)] font-semibold text-sm my-4  ">FEATURED TESTIMONAL</div>
+                    <div class="text-[rgb(1,75,156)] font-bold text-3xl md:text-4xl">What they are saying about us?
+                    </div>
+                    <div class="text-slate-600 md:text-slate-800 mt-6">Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Repellat vitae veniam similique facere quis numquam laboriosam nisi illum
+                        fugit architecto.</div>
+
+
+                </div>
+
+                <div
+                    class="w-72 md:w-96 h-64 md:h-52  flex justify-center flex-col  items-center relative top-[-330px] md:top-24 bg-white ml-4  border-b-4 border-[rgb(101,192,245)] px-7 md:ml-[450px]">
+                    <div class="mt-12">I was very impresed by the top level plumbing services lorem ipsum is simply free
+                        text available used by copy typing refreshing. Neque porro noting est qui dolorem ipsum quia.
+                    </div>
+
+                    <img src="../images/testimonial-quote.webp" alt="image" class="h-9 w-14 ml-32 mt-4">
+                    <img src="../images/testimonial-update.webp" alt="images" class="h-20 w-20 ml-[-130px] mb-[-22px]">
+
+
+                </div>
+                <div class="relative top-[-325px] text-right mr-8 md:top-80 md:relative md:right-60">
+                    <div class="text-[rgb(1,75,156)] font-bold  text-xl">Aleesha Brown</div>
+                    <div class="text-sm font-bold text-slate-500 md:text-slate-600">SATISFIED CUSTOMER</div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+        <div>
+            <div class="h-[700px] bg-[rgb(1,75,156)] relative top-[-1085px]">
+                <div>
+                <div class="flex justify-center pt-10 "><img src="../images/logo.webp" alt="images" class="h-9 w-44 "></div>
+                <div class="flex gap-5 justify-center items-center mt-8">
+                    <div class="w-8 h-8  rounded-full text-center bg-blue-900"><i class="fa-brands fa-facebook text-white "></i></div>
+                    <div class="w-8 h-8  rounded-full text-center bg-blue-900"><i class="fa-brands fa-x-twitter text-white"></i></div>
+                    <div class="w-8 h-8  rounded-full text-center bg-blue-900"><i class="fa-brands fa-instagram text-white"></i></div>
+                    <div class="w-8 h-8  rounded-full text-center bg-blue-900"><i class="fa-solid fa-envelope text-white"></i></div>
+                </div>
+            </div>
+
+            <div>
+                <!-- contact -->
+                <div>
+                    <div>Contact</div>
+                    <div><i class="fa fa-envelope"></i><span>needhelp@xompany.com</span></div>
+                    <div></div>
+                    <div></div>
+
+                </div>
+                <!-- explore -->
+                <div>
+
+                </div>
+
+                <!-- info -->
+                <div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
